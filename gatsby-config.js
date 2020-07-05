@@ -3,6 +3,7 @@ module.exports = {
     title: 'Renata\'s Code notes',
     description: `Quick notes I can reference to later.`
   },
+  pathPrefix: "/code-notes",
   plugins: [
     {
       resolve: 'gatsby-theme-code-notes',
