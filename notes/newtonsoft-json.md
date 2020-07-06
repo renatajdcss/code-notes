@@ -7,7 +7,8 @@ emoji: 🚀
 link: https://www.newtonsoft.com/json/help/html/Introduction.htm
 ---
 
-# Rename JSON properties
+## Rename JSON properties
+
 ```C#
 public class Videogame
 {
@@ -18,7 +19,9 @@ public class Videogame
     public DateTime ReleaseDate { get; set; }
 }
 ```
-## Usage 
+
+### Usage
+
 ```C#
 Videogame starcraft = new Videogame
 {
@@ -28,9 +31,9 @@ Videogame starcraft = new Videogame
 string json = JsonConvert.SerializeObject(starcraft, Formatting.Indented);
 ```
 
-From <https://www.newtonsoft.com/json/help/html/JsonPropertyName.htm> 
+From <https://www.newtonsoft.com/json/help/html/JsonPropertyName.htm>
 
-# Serialize JSON to a file
+## Serialize JSON to a file
 
 ```C#
 Movie movie = new Movie
@@ -48,9 +51,9 @@ using (StreamWriter file = File.CreateText(@"c:\movie.json"))
 }
 ```
 
-From <https://www.newtonsoft.com/json/help/html/SerializeWithJsonSerializerToFile.htm> 
+From <https://www.newtonsoft.com/json/help/html/SerializeWithJsonSerializerToFile.htm>
 
-# Ignore null values
+## Ignore null values
 
 ```C#
 string jsonIgnoreNullValues = JsonConvert.SerializeObject(person, Formatting.Indented, new JsonSerializerSettings
@@ -58,4 +61,5 @@ string jsonIgnoreNullValues = JsonConvert.SerializeObject(person, Formatting.Ind
     NullValueHandling = NullValueHandling.Ignore
 });
 ```
-From <https://www.newtonsoft.com/json/help/html/NullValueHandlingIgnore.htm> 
+
+From <https://www.newtonsoft.com/json/help/html/NullValueHandlingIgnore.htm>

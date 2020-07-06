@@ -17,7 +17,7 @@
 	// }
 	"Code Notes template": {
 		"scope": "markdown",
-		"prefix": "note",
+		"prefix": "note-base",
 		"body": [
 			"---",
 			"title: $1",

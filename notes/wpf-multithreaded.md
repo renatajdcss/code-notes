@@ -13,16 +13,20 @@ link: https://pragmaticdevs.wordpress.com/2015/08/25/modifying-observablecollect
 ```System.NotSupportedException : This type of CollectionView does not support changes to its SourceCollection from a thread different from the Dispatcher thread.```
 
 * For WPF 4.5 we only need to:
-  *  Create the ObservableCollection in the main thread (Usually ViewModel)
+  * Create the ObservableCollection in the main thread (Usually ViewModel)
+
   ```C#
     DeviceList = new ObservableCollection<KasaaDevice>();
   ```
+
   * Use BindingOperations.EnableCollectionSynchronization
+
   ```C#
     BindingOperations.EnableCollectionSynchronization(DeviceList, _lock);
   ```
 
   * Don't forget to add the lock object to class
+
   ```C#
     private static object _lock = new object();
   ```

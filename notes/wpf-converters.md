@@ -20,11 +20,14 @@ link:
     </Window.Resources>
 ```
 
-# Custom Converters
+## Custom Converters
+
 * Inherit from IValueConverter and implement convert methods
 
 ## Samples
+
 * NullToVisibility
+
 ```C#
     public sealed class NullToVisibilityConverter : IValueConverter
     {
@@ -41,6 +44,7 @@ link:
 ```
 
 * EnumToBoolean ([Source](https://www.codecisions.com/wpf-binding-boolean-to-an-enum-value/))
+
 ```C#
     public sealed class EnumToBoolConveter : IValueConverter
     {
@@ -63,6 +67,7 @@ link:
 ```
 
 * Enum to Color ([Source](https://code.4noobz.net/c-enum-color-converter-ivalueconverter/))
+
 ```C#
    public sealed class StateToColourConverter : IValueConverter
     {
@@ -96,7 +101,9 @@ link:
         }
     }
 ```
+
 XAML:
+
 ```xml
     <Window.Resources>
 ...
