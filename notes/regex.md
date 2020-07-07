@@ -5,7 +5,7 @@ tags:
 emoji: 
 link: 
 ---
-## Character type/quantity in Regex
+## Basic Regex
 
 | Type | Regex  | Meaning |
 | ------------ | ------ | -------------|
@@ -16,15 +16,26 @@ link:
 | not a number | `[^0-9]` | not a number |
 |              | `^`     | beginning of line|
 |             | `$`      | end of line |
-|             | `(a|b)` | a OR b|
+| logical or | `(a`\|`b)` | a or b |
 
-### No of Chars
+### More Quantifiers
 
-| `?`| `0` or `1` |
-| ----- | --------- |
+| Quantifier | Meaning|
+|---------|------------|
+| `?`     | `0` or `1` |
 | `+`     | `1` or more |
-| `{x}`   | amount =`x` |
+| `{x}`   | Exactly `x` |
 | `{x,y}` | `x` to `y` |
+
+### White Space
+|Character|Meaning|
+|---------|-------|
+|`\t`|Tab|
+|`\r`|Carriage return|
+|`\n`|Line feed|
+| `\s`|Any whitespace|
+
+More: [Regex Quickstart Cheat Sheet](https://www.rexegg.com/regex-quickstart.html)
 
 ## Regex in VSCode
 
