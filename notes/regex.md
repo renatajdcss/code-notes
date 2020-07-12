@@ -28,6 +28,7 @@ link:
 | `{x,y}` | `x` to `y` |
 
 ### White Space
+
 |Character|Meaning|
 |---------|-------|
 |`\t`|Tab|
@@ -79,7 +80,6 @@ const result = /^hello/.test(str);
 var stringToGoIntoTheRegex = "abc";
 var regex = new RegExp("#" + stringToGoIntoTheRegex + "#", "g");
 ```
-
 
 ### JavaScript Regex Resources
 

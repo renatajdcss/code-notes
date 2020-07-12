@@ -3,7 +3,7 @@ title: Refactoring Simple JQuery site to React
 tags:
 - React
 - JavaScript
-- webpack
+- Webpack
 emoji: 🚧
 link: https://michaelwashburnjr.com/2018/01/30/refactoring-jquery-react/
 ---
