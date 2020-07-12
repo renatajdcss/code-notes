@@ -76,6 +76,8 @@ regexObj.test(str);
 const str = 'hello world!';
 const result = /^hello/.test(str);
 
+var stringToGoIntoTheRegex = "abc";
+var regex = new RegExp("#" + stringToGoIntoTheRegex + "#", "g");
 ```
 
 
