@@ -1,8 +1,9 @@
 ---
 title: Loading Images using webpack and React
 tags:
-- reactjs
-- webpack
+- Reactjs
+- Webpack
+- JavaScript
 emoji: 🖼
 link: https://github.com/survivejs/webpack-book/issues/80#issuecomment-216068406
 ---
