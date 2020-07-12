@@ -68,7 +68,19 @@ e.g.: `'bar foo'.replace(/(...) (...)/, '$2 $1')`
 ```js
 let re1 = /ab+c/;
 let re2 = new RegExp('ab+c');
+const regex = RegExp('foo*');
+const globalRegex = RegExp('foo*', 'g');
+
+regexObj.test(str);
+
+const str = 'hello world!';
+const result = /^hello/.test(str);
+
 ```
 
+
+### JavaScript Regex Resources
+
 * [Regex Tester](https://www.regextester.com/)
+* [MDN RegExp.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 * [MDN Cheatsheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)

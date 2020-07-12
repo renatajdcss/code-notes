@@ -8,7 +8,56 @@ emoji: 🖼
 link: https://github.com/survivejs/webpack-book/issues/80#issuecomment-216068406
 ---
 
-## Create object with images from a folder
+## Loading a single image
+
+```JSX
+import React from 'react';
+import heroImg from '../../assets/images/hero-img.png';
+
+
+function HeroContainer() {
+    return (
+        <div>
+        ...
+                      <img className="hero-img" src={heroImg} alt="Hero Image" />
+        ...
+        </div>
+```
+
+## Loading images dynamically
+
+```JSX
+const thumbnails = require.context('../../assets/images/thumbnails', true);
+...
+
+function Component() {
+...
+
+  const cards = cardsData.map((card) => (
+    <React.Fragment key={card.id} >
+...
+              <img
+                className="card-img-top"
+                src={thumbnails(`./${projCard.id}.jpg`).default}
+              />
+...
+    </React.Fragment>
+  ));
+
+...
+  return (
+      <div className="some-class">
+        {cards}
+      </div>
+      ...
+  );
+}
+export default Component;
+```
+
+## Getting all images from a folder
+
+### Create object with images from a folder
 
 ```javascript
   const mapProjectImgs = (context) => {
@@ -34,6 +83,8 @@ link: https://github.com/survivejs/webpack-book/issues/80#issuecomment-216068406
 ...
 }
 ```
+
+#### Filter the object and get only the images we need
 
 ## Webpack require.context Notes
 
