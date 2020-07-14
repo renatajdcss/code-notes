@@ -25,6 +25,20 @@ let filtered = arrayToFilter.filter(element => element.property.includes("someth
 const filteredObject = pickBy(sourceObject, (value, key) => (key.toLowerCase()).includes('filter'));
 ```
 
+## Iterate Object keys
+
+>_Note:_ In Javascript, Objects `{}`, don't have the method `.map()`, it's only for Arrays `[]`.
+
+```js
+// ES way
+Object.keys(data).map(item => {...});
+Object.keys(data).forEach(item => {...});
+```
+
+Object.keys is used to create an array from object keys, more info from
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+
+
 ## Other Useful Resources
 
 * [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
