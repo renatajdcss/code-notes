@@ -44,3 +44,4 @@ There's an ESLint plugin called eslint-plugin-react-hooks that enforces these tw
 * [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
 * [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html)
 * [Data fetch sample](https://codesandbox.io/s/jvvkoo8pq3)
+* [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
