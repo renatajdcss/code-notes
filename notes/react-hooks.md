@@ -23,38 +23,6 @@ React’s useEffect hook can be used as a replacement for the following class-ba
 * it's safe to use `[]` if we are not using any values from the component scope (props, state, and anything derived from them)
   * alternative: wrap its definition into the `useCallback` Hook (ensure it doesn’t change on every render unless its own dependencies also change)
 
-**Sample:** refactoring [`useDocumentScrollThrottled.js`](https://gist.github.com/trooperandz/b1cffdc44dd80484608901b26aa5f1ce#file-usedocumentscrollthrottled-js) from [Create a Transitioning Header Using React Hooks](https://medium.com/mtholla/create-a-transitioning-header-using-react-hooks-like-mediums-c70ed211f7c9) to comply with `exhaustive-deps` ESLint rule:
-
-```js
-function useDocumentScrollThrottled(callback) {
-  const [, setScrollPosition] = useState(0);
-  
-  const handleDocumentScroll = useCallback(() => {
-    let previousScrollTop = 0;
-    const { scrollTop: currentScrollTop } = document.documentElement || document.body;
-
-    setScrollPosition(previousPosition => {
-      previousScrollTop = previousPosition;
-      return currentScrollTop;
-    });
-
-    callback({ previousScrollTop, currentScrollTop });
-  }, [callback]);
-
-
-  useEffect(() => {
-    const handleDocumentScrollThrottled = throttle(handleDocumentScroll, 250);
-    window.addEventListener('scroll', handleDocumentScrollThrottled);
-
-    return () =>
-      window.removeEventListener('scroll', handleDocumentScrollThrottled);
-  }, [handleDocumentScroll]);
-}
-
-export default useDocumentScrollThrottled;
-
-```
-
 ## React useState
 
 Returns a stateful value, and a function to update it.
